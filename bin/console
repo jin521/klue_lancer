@@ -1,0 +1,88 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "klue_lancer"
+
+# You can add fixtures and/or initialization code here to make experimenting
+# with your gem easier. You can also use a different console, if you like.
+
+# (If you use this, don't forget to add pry to your Gemfile!)
+require "pry"
+
+# require "irb"
+# IRB.start(__FILE__)
+
+TEST_DATA_1 =
+  {
+    "title": "SEO audit For my website",
+    "description": "Run a SEO audit on my website",
+    "budget": {
+        "minimum": 50,
+        "maximum": 100,
+        "currency_id": 3
+    },
+    "jobs": [{"id": 38}]
+}
+
+FIXED_PROJECT_DATA =
+{
+    "title": "Fix my PHP website",
+    "description": "I wrote a small website in PHP but it does not work. I need someone to fix it.",
+    "currency": {
+        "id": 3
+    },
+    "budget": {"minimum": 250, "maximum": 500
+    },
+    "jobs": [{"id": 3},{"id": 17}]
+}
+
+HOURLY_PROJECT =
+{
+    "title": "Fix my PHP website",
+    "description": "I wrote a small website in PHP but it does not work. I someone to fix it.",
+    "currency": {
+        "code": "USD",
+        "id": 1,
+        "sign": "$"
+    },
+    "budget": {"minimum": 50, "maximum": 75 },
+    "jobs": [{"id": 3},{"id": 17}],
+    "type": "HOURLY",
+    "hourly_project_info": {
+        "commitment": {
+            "hours": 40,
+            "interval": "WEEK"
+        }
+    }
+}
+
+
+HIRE_ME_PROJECT =
+{
+  "title": "Fix my PHP website",
+  "description": "I wrote a small website in PHP but it does not work. I someone to fix it.",
+  "currency": {"id": 3},
+  "budget": {"minimum": 250, "maximum": 500},
+  "jobs": [{"id": 3},{"id": 17}],
+  "hireme": true,
+  "hireme_initial_bid":
+    {"bidder_id": 25832245,
+      "amount": 300,
+      "period": 1}
+}
+
+LOCAL_JOB_PROJECT =
+{
+  "title": "Mow my lawn",
+  "description": "The grass in my yard is very long and needs mowing",
+  "currency": {"id": 3},
+  "budget": {"minimum": 50,"maximum": 100},
+  "jobs": [{"id": 660}],
+  "location": {
+                "city": "Sydney",
+                "country": {"name": "Australia"},
+                "latitude": -33.8744101,
+                "longitude": 151.2028
+              }
+}
+Pry.start
