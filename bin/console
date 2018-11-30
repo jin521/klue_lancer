@@ -29,10 +29,9 @@ FIXED_PROJECT_DATA =
     "title": "Fix my PHP website",
     "description": "I wrote a small website in PHP but it does not work. I need someone to fix it.",
     "currency": {
-        "id": 3
+        "id": 3  # always use id: 3 to represent AUD
     },
-    "budget": {"minimum": 250, "maximum": 500
-    },
+    "budget": {"minimum": 250, "maximum": 500},
     "jobs": [{"id": 3},{"id": 17}]
 }
 
