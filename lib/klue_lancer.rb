@@ -57,7 +57,8 @@ module KlueLancer
       uri = URI.parse(FREELANCER_RESOURCE_URL)  # returns string
       headers = { 'Content-Type' => 'application/json', 'freelancer-oauth-v1' => get_token(bearer_token) }
 
-      Faraday.new(url: uri).post '/api/projects/0.1/projects/', data.to_json, headers
+      res = Faraday.new(url: uri).post '/api/projects/0.1/projects/', data.to_json, headers
+      result = JSON.parse(res.body)['result']['id']
       # handle exceptions here
     end
 
