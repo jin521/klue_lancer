@@ -13,7 +13,7 @@ module KlueLancer
 
     FREELANCER_AUTH_SERVER_URL = 'https://accounts.freelancer-sandbox.com/oauth/authorize'
     FREELANCER_RESOURCE_URL = 'https://www.freelancer-sandbox.com'
-    REDIRECT_URL = 'https://damp-scrubland-51985.herokuapp.com/api/v1/freelancers/auth?david=cruwys&jin=cool'
+    REDIRECT_URL = 'https://klue-popup-team.herokuapp.com/api/v1/freelancers/auth?'
 
     def initialize
       @client_id = CLIENT_ID
